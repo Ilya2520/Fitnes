@@ -1,8 +1,20 @@
 
-  function func(){
-    var arr=[];
-    arr.push(document.getElementsByClassName("item"));
-    for(var i=0;i<arr.length;i++){
-        document.getElementById("c5")=arr[i];
-    }
-  }
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const mediaFiles = document.querySelectorAll('img, video');
+    let i = 0
+
+    Array.from(mediaFiles).forEach((file, index) => {
+        file.onload = () => {
+            i++
+
+            percents.innerHTML = ((i * 100) / mediaFiles.length).toFixed(1)
+
+            if(i === mediaFiles.length) {
+                preloader.classList.add('preloader--hide')
+                percents.innerHTML = 100
+            }
+        }
+    })
+
+})
