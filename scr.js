@@ -21,5 +21,5 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('preloader').remove();
+  document.querySelectorAll('preloader')[0].remove();
 })
