@@ -1,0 +1,305 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    margin:0;
+    background-color: #09161d;
+}
+p{
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+}
+.body1{
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.card, .card1,.card2{
+    position: relative;
+    overflow: hidden;
+    z-index: 0; 
+    width: 450px;
+    height: 295px;
+    
+    
+}
+
+.card_img{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card::before,.card1::before,.card2::before{
+    
+    opacity: 0;
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+   
+}
+
+.card::before{
+    background-image: linear-gradient(#5a056b,#5a056b), linear-gradient(#5a056b,#5a056b),linear-gradient(#5a056b,#c8870f),linear-gradient(#5a056b,#c8870f);
+    animation: rotate 8s linear infinite;
+
+}
+.card1::before{
+    background-image: linear-gradient(#5a056b,#5a056b), linear-gradient(#5a056b,#5a056b),linear-gradient(#5a056b,#025988),linear-gradient(#5a056b,#025988);
+    animation: rotate 8s linear infinite;
+}
+.card2::before{
+    background-image: linear-gradient(#000000,#000000), linear-gradient(#000000,#000000),linear-gradient(#000000,#a70d0d),linear-gradient(#000000,#a70d0d);
+    animation: rotate 8s linear infinite;
+}
+/* 
+.card::after,.card1::after,.card2::after{
+    content: '';
+    
+    
+   
+      position: absolute;
+      z-index: -1;
+      left: 3px;
+      top: 3px;
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      
+    background-color: #0e3d56;
+      border-radius: 5px;
+
+} */
+/* 
+.card::after{
+    background: url(st.png);
+    background-size:cover;
+    
+}
+
+.card1::after{
+    background: url(mid.png);
+    background-size:cover;
+}
+
+.card2::after{
+    background: url(pre.png);
+    background-size:cover;
+}
+ */
+
+.card:hover::before,.card1:hover::before,.card2:hover::before{
+   opacity: 1;
+    transition:1s
+    
+
+}
+
+
+.card_img:hover{
+    left: 3px;
+    top: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    transition: 0.2s;
+    transition-delay: 0.5s;
+}
+
+.card_name{
+    position: relative;
+    top:30px;
+    font-size: 28px;
+    color: aliceblue;
+}
+.card_price{
+    
+    position: relative;
+    top:20px;
+    font-size: 28px;
+    color: aliceblue;
+
+}
+.card:hover{
+    transition: 2s;
+}
+
+@keyframes rotate {
+    100% {
+      transform:  rotate(1turn);
+    }
+  }
+.podp{
+    margin-top:200px;
+}
+
+
+
+
+
+.card,.card1,.card2{
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  img, .back{
+    background-size: cover;
+    background-position: center;
+    min-height: 295px; /* Высота изображения */
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    backface-visibility: hidden;
+  }
+  .t{
+    background-image: linear-gradient(#000C14,#a70d0d);
+   
+  }
+  .f{
+    background-image:linear-gradient(#5a056b,#c8870f)
+  }
+  .s{
+    background-image: linear-gradient(#5a056b,#025988);
+  }
+  img:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+              backface-visibility: hidden;
+    border-radius: 50%; /* Скругление углов */
+  }
+  .card:hover img,
+  .card:hover .back{ 
+     transition: transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+  
+  .card1:hover img,
+  .card1:hover .back{
+    transition: transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+  
+  .card2:hover img,
+  .card2:hover .back{
+    transition: transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+  .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .inner{
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem; 
+                 box-sizing: border-box;
+    outline: 1px solid transparent;
+              perspective: inherit;
+    z-index: 2;
+  }
+  .card .back,.card1 .back,.card2 .back{
+              transform: rotateY(180deg);
+              transform-style: preserve-3d;
+  }
+  .card img,.card1 img,.card2 img{
+              transform: rotateY(0deg);
+              transform-style: preserve-3d;
+  }
+  .card:hover .back,.card1:hover .back,.card2:hover .back{
+            transform: rotateY(0deg);
+            transform-style: preserve-3d;
+            
+  }
+  .card:hover img,.card2:hover img,.card1:hover img{
+            transform: rotateY(-180deg) ;
+            transform-style: preserve-3d;
+  }
+  @keyframes anim{
+100%{
+    
+    left: 3px;
+    top: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+            
+}
+  }
+  img .inner p{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  img .inner p:after{
+    content: '';
+    width: 4rem;
+    height: 1px;
+    position: absolute;
+    background: #C6D4DF;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+  }
+  img .inner span{
+    color: rgba(255,255,255,0.7);
+    font-family: 'Montserrat';
+    font-weight: 300;
+  }
+
+
+@media (max-width:500px) {
+
+    
+.body1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+
+}
+.card_price{
+    font-size: 20px;
+}
+
+
+img, .back{
+    min-height: 235px; /* Высота изображения */
+    height: auto;
+    font-size: 1rem;
+    transition: transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    backface-visibility: hidden;
+  }
+.card,.card1,.card2{
+    margin-top: 20px;
+    width: 350px;
+    height: 235px;
+}
+
+
+
+}
