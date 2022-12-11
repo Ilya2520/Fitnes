@@ -11,7 +11,7 @@
             percents.innerHTML = ((i * 100) / mediaFiles.length).toFixed(1)
 
             if(i === mediaFiles.length) {
-                preloader.classList.add('preloader--hide')
+                preloader.remove();
                 percents.innerHTML = 100
             }
         }
