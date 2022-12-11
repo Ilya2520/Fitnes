@@ -1,20 +1,25 @@
 
-  document.addEventListener('DOMContentLoaded', () => {
+//   document.addEventListener('DOMContentLoaded', () => {
 
-    const mediaFiles = document.querySelectorAll('img, video');
-    let i = 0
+//     const mediaFiles = document.querySelectorAll('img, video');
+//     let i = 0
 
-    Array.from(mediaFiles).forEach((file, index) => {
-        file.onload = () => {
-            i++
+//     Array.from(mediaFiles).forEach((file, index) => {
+//         file.onload = () => {
+//             i++
 
-            percents.innerHTML = ((i * 100) / mediaFiles.length).toFixed(1)
+//             percents.innerHTML = ((i * 100) / mediaFiles.length).toFixed(1)
 
-            if(i === mediaFiles.length) {
-                preloader.remove();
-                percents.innerHTML = 100
-            }
-        }
-    })
+//             if(i === mediaFiles.length) {
+//                 preloader.remove();
+//                 percents.innerHTML = 100
+//             }
+//         }
+//     })
 
+// })
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('preloader').remove();
 })
