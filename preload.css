@@ -12,6 +12,7 @@
 }
 
 .preloader--hide {
+  display: none;
   opacity: 0;
   visibility: hidden;
   z-index: -1;
