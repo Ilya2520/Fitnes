@@ -48,6 +48,7 @@ h2{
     font-size: 24px;
     background-color: rgba(187, 34, 34, 0.7);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .cvadr {
