@@ -122,51 +122,5 @@ a{
   object-fit: cover;
 }
 
-/* 
-
-.card1{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.card2{
-}
-
-.card3{
-  grid-column-start: 1;
- grid-column-end: 2;
-
-}
-.card4{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.card5{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.card6{
-  grid-column-start: 1;
- grid-column-end: 2;
- grid-row-start: 1;
- grid-row-end: 2;
-
-}
-.card10{
-  
- grid-row-start: 1;
- grid-row-end: 2;
- grid-row-start: 1;
- grid-row-end: 2;
-} */
-
 
 }
