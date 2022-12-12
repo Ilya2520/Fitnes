@@ -47,20 +47,7 @@ html {
 .tx{
   margin-left: 15px;
 }
-/* .bottom{
-    display: grid;
-    grid-area: bottom;
-    grid-template-areas:
-    'tx tx'
-    'name surname'
-    'mail tel'
-    'mes mes'
-    'but but';
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10px repeat(minmax(0px,auto),4);
-    grid-gap: 10px;
-    border: none;
-} */
+
 .bot{
     margin: 10px;
 }
@@ -193,70 +180,6 @@ ul li{
     padding: 10px;
     grid-area: content;
 }
-/* 
-.footer{
-    overflow: hidden;
-    grid-area: footer;
-}
-
-
-
-
-footer p {
-    color: #fff;
-    text-align: center;
-    margin-top: 15px;
-    font-size: 1.1em;
-  }     */
-/* 
-footer address {
-    position: relative;
-    width: 100%;
-    padding: 20px 50px;
-    background: #ff5035;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   } */
-/* 
-   
-footer .wave{
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-}
-.social,
-.menu{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  flex-wrap: wrap;
-}
-.social li,
-.menu li{
-  list-style: none;
-}
-.social li a {
-  font-size: 2em;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
-}
-.menu li a {
-  font-size: 1.2em;
-  color: #fff;
-  opacity: 0.75;
-  margin: 0 15px;
-  text-decoration: none;
-  display: inline-block;
-} */
-
 input{
     padding: 10px;
     margin: 10px 0;
