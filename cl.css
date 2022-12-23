@@ -346,15 +346,22 @@ body{
     opacity: 0;
     height: 6%;
 }
+.objIog p{
+    margin-top: -15px;
+}
 
 .obj{
     color: white;
     position: fixed;
     margin: 5%;
-    margin-top: 29%;
+    margin-top: 25%;
     width: 0%;
     opacity: 0;
     height: 6%;
+}
+.obj p{
+    
+    margin-top: 60px;
 }
 
 .sr{
