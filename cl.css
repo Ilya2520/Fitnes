@@ -84,6 +84,7 @@ body{
     flex-direction: column;
   }
   li{
+     margin-top:-50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size:1.5rem;
     color: white;
