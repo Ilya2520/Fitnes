@@ -14,8 +14,81 @@ body{
     margin-top: 3rem;
 }
 
-.LB{
+.nav1{
+    top: 20px;
+    right: 90px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: fixed;
+    overflow-y: auto;
+    height: 30%;
+    border-radius: 25px;
+    z-index: -1;
+    width: 20%;
+    background-color: #513e63b8;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(15px);
+  }
+.menu-btn2{
+    position: fixed;
+    z-index: 10001;
+    right: 90px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: rgb(255, 242, 242);
+    content: "\f015";
+    font-family: FontAwesome;
+}.menu-btn3{
+    position: fixed;
+    font-family: FontAwesome;
+    z-index: -1;
+    line-height: 50px;
+    right: 160px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(209, 0, 0);
+    opacity: 0;
+    background-color: white;
+    cursor: pointer;
 }
+  
+  #colect:checked ~ .nav1{
+    opacity: 1;
+    z-index: 10000;
+  }
+  #colect:checked ~.menu-btn3{
+    z-index: 10001;
+    opacity: 1;
+  }
+
+  #colect:checked ~ .menu-btn2{
+    background-color: white;
+  }
+
+  .nav1 ul{
+    display: flex;
+    flex-direction: column;
+  }
+  li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:1.5rem;
+    color: white;
+    list-style: none;
+    text-align: center;
+  }
 
 .RB{right: 0;
 }
@@ -358,4 +431,14 @@ body{
 .LB, .RB{
     opacity: 0;
 }
+    
+.nav1{
+    width: 30%;
+}
+li{
+    margin-top: -50px;
+    font-size:1rem;
+    color: white;
+    text-align: center;
+  }
 }
