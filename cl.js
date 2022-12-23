@@ -1,21 +1,3 @@
-var screen=window.screen.width;
-// if (screen<500){
-//     var c=document.querySelectorAll(".it1");
-//     c[0].innerHTML="Пн";
-//     c[1].innerHTML="Вт";
-//     c[2].innerHTML="Ср";
-//     c[3].innerHTML="Чт";
-//     c[4].innerHTML="Пт";
-//     c[5].innerHTML="Сб";
-//     c[6].innerHTML="Вс";
-// }
-// var scr=screen-15;
-// document.querySelector("RB").style.marginLeft=scr+"px";
-var text=2*screen/7;
-var treners=["Смирнов А.В", "Иванов Д.В", "Григорьев М.П", "Игнатьев Л.Н","Невский А.Н"];
-var r="</br>";
-
-
 
 var events1=document.querySelectorAll(".event1");
 var clr1="#f6b067";
@@ -28,23 +10,39 @@ var clr3="#7eff75";
 var events4=document.querySelectorAll(".event4");
 var clr4="#ffe93e";
 
+var massiv=new Array(5);
+var bccc=[events,events1,events2,events3,events4];
+for(var j=0;j<5;j++){
+    massiv[j]=Array(bccc[j].length).fill(0);
+}
+var treners=["Смирнов А.В", "Иванов Д.В", "Григорьев М.П", "Игнатьев Л.Н","Невский А.Н"];
+var r="</br>";
+var ul = document.getElementById("list");
+var bt=document.getElementById("menu-btn3");
+
+function del(){
+    ul.innerHTML="<ul></ul>";
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode("Нет записей"));
+    ul.appendChild(li);
+    ul.style.flexDirection="column";
+    for(var j=0;j<5;j++){
+        massiv[j]=Array(bccc[j].length).fill(0);
+    }
+}
+del();
+
 
 function start(ioga,clrs,n){
-        
     for(var i=0;i<ioga.length;i++){
-        console.log(ioga[i].style.background);
     ioga[i].addEventListener('click',function(){
+        
         var b=this.innerHTML.indexOf("-");
         var str=[this.innerHTML.slice(b-6,b),this.innerHTML.slice(b+1,b+7)];
         var bc=this.querySelectorAll(".ioga");
         var zj=document.getElementById("zj");
         var zj1=document.getElementById("zj1");
         var zj0=document.getElementById("zj0");
-        // this.style.animation="anim 5s";
-        // this.style.zIndex=1000;
-        // this.style.position="absolute";
-        // this.style.height="250px";
-        // this.style.width="250px";
         var idu=document.getElementById("node");
         var idu2=document.getElementById("node2");
         idu2.innerHTML="Тренер: "+treners[n-1]+r+"Длительность занятия: "+resH(str)+" час(а)"+r+"Для того, чтобы записаться,"+r+" нажмите на кнопку";
@@ -58,9 +56,21 @@ function start(ioga,clrs,n){
         idu2.style.textAlign="center";
         zj1.insertAdjacentHTML("beforeend", '<button class="remove-butto">Записаться</button>');
         zj1.lastChild.onclick=()=>{
-            window.location.href="log.html";
+            if( massiv[n-1][i-1]!=1){
+                var str=ul.innerHTML;
+                if(str.includes("Нет записей")){
+                    ul.removeChild(ul.lastElementChild);
+                }
+                var li = document.createElement("li");
+                li.append(document.createTextNode(bc[0].innerHTML));
+                ul.append(li);
+                ul.style.flexDirection="column";
+                massiv[n-1][i-1]+=1;
+        }else{
+            alert("Вы уже записались на событие данного цвета");
         }
-   
+
+        }
         zj.style.background=clrs;
     zj.style.opacity=1;
     zj.style.position="fixed";
@@ -114,4 +124,6 @@ function hours(str1){
 function resH(l){
     return res = parseInt(hours(l[1]))-parseInt(hours(l[0]));
 }
+
+
 
