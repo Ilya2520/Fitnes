@@ -11,7 +11,9 @@
     background: rgba(200, 25, 25, 0);
     clip-path: circle(25px at calc(100% - 45px) 45px);
     transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
   }
   #active:checked ~ .nav{
     clip-path: circle(75%);
@@ -81,7 +83,9 @@
     border-radius: 50px;
     transform: scaleY(0);
     z-index: -1;
+     -webkit-animation: rotate 1.5s linear infinite;
     animation: rotate 1.5s linear infinite;
+     -webkit-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
   }
   .nav ul li a:hover:after{
