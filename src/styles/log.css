@@ -100,7 +100,7 @@ html {
 	width:30px;
 	height:30px;
 	bottom:20px;
-	background-image: url(rpt.png);
+	background-image: url("../images/rpt.png");
 }
 
 #txtInput, #Button1{

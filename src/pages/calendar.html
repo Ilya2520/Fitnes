@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cl.css"><link rel="icon" href="sch.png"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="preload.css">
-    <link rel="stylesheet" href="Menu.css">
-    <link rel="icon" href="sch.png">
+    <link rel="stylesheet" href="../styles/cl.css"><link rel="icon" href="../images/sch.png"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/preload.css">
+    <link rel="stylesheet" href="../styles/Menu.css">
+    <link rel="icon" href="../images/sch.png">
     <title>Timetable</title>
 </head>
+<body>
 <body>
     
     <div id="preloader" class="preloader">
@@ -30,9 +31,9 @@
     <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
     <div class="nav">
         <ul>
-            <li><a href="index.html">Информация</a></li>
-            <li><a href="1.html">Галерея</a></li>
-            <li><a href="6.html">Тарифы</a></li>
+            <li><a href="../../index.html">Информация</a></li>
+            <li><a href="galery.html">Галерея</a></li>
+            <li><a href="rates.html">Тарифы</a></li>
             <li><a href="calendar.html">Расписание</a></li>
         </ul>
     </div>
@@ -46,128 +47,6 @@
     
     <input type="checkbox" id="colect1">
     <label for="colect1" class="menu-btn3" onclick="del()"><i class="fas fa-trash"></i></label>
-<!--     
-    <p>Расписание групповых занятий:</p>
-    <div class="days">
-        <div class="item m" >
-            <div class="it1"></div>
-            <div class="it3">09:00</div>
-            <div class="it3">10:00</div>
-            <div class="it3">11:00</div>
-            <div class="it3">12:00</div>
-            <div class="it3">13:00</div>
-            <div class="it3">14:00</div>
-            <div class="it3">15:00</div>
-            <div class="it3">16:00</div>
-            <div class="it3">17:00</div>
-            <div class="it3">18:00</div>
-            <div class="it3">19:00</div>
-        </div>
-        <div class="item m" >
-            <div class="it1">Понедельник</div>
-            <div class="it2">
-                <p>gGYGGGGGG</p>
-                <p>gGYGGGGGG</p>
-                <p>gGYGGGGGG</p>
-                <p>gGYGGGGGG</p>
-                <p>gGYGGGGGG</p>
-            </div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-        </div>
-        <div class="item t" >
-            <div class="it1">Вторник</div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-        </div>
-        <div class="item w" >
-            <div class="it1">Среда</div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-        </div>
-        <div class="item th" >
-            <div class="it1">Четверг</div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-        </div>
-        <div class="item fr" >
-            <div class="it1">Пятница</div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-        </div>
-        <div class="item sut" >
-            <div class="it1">Суббота</div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-        </div>
-        <div class="item sub" >
-            <div class="it1">Воскресенье</div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-            <div class="it2"></div>
-        </div> 
-    </div>-->
     <div class="back" id="zj0"></div>
     <div class="obj" id="zj1">
         <p id="node2"></p>
@@ -374,8 +253,8 @@
             <div class="it2"></div>
     </div>
    
-<script src="scr.js"></script>     
-<script src="cl.js"></script>  
-<script src="nd.js"></script>
+<script src="../scripts/scr.js"></script>     
+<script src="../scripts/cl.js"></script>  
+<script src="../scripts/nd.js"></script>
 </body>
 </html>
